@@ -36,9 +36,9 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/css/style.css" rel="stylesheet">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 	/* We add some JavaScript to pages with the comment form
