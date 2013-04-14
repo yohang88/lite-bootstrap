@@ -57,3 +57,31 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class="container-narrow">
+
+	<div class="masthead">
+		<ul class="nav nav-pills pull-right">
+			<li class="active"><a href="/">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		<h3 class="muted">My Website Name</h3>
+	</div>
+
+	<hr>
+
+	<?php if(is_home()): ?>
+	<div class="jumbotron">
+		<img src="/loremphoto/timthumb.php?h=300&w=700&src=/loremphoto/photo/<?php echo rand(1,6) ?>.jpg" />
+	</div>
+
+	<hr>
+<?php endif; ?>
+
+	<ul class="breadcrumb">
+		<li><a href="/">Home</a> <span class="divider">/</span></li>
+		<li><a href="#">Library</a> <span class="divider">/</span></li>
+		<li class="active">Data</li>
+	</ul>
+

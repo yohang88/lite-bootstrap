@@ -2,9 +2,9 @@
   margin: 0 auto;
   max-width: 700px;
 }
-img {
+.article-list img {
   width: 100%;
 }
-.row-fluid [class*="span"]:nth-child(odd) {
+.article-list.row-fluid [class*="span"]:nth-child(odd) {
   margin-left: 0;
 }
