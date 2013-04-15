@@ -29,3 +29,18 @@ function add_my_post_types_to_query( $query ) {
         $query->set( 'post_type', array( 'post', 'page', 'quote', 'photo', 'video' ) );
     return $query;
 }
+
+add_action( 'init', 'register_my_menus' );
+
+function register_my_menus() {
+    register_nav_menus(
+        array(
+            'header' => 'Header Menu'
+        )
+    );
+}
+
+function new_excerpt_length($length) {
+    return 13;
+}
+add_filter('excerpt_length', 'new_excerpt_length');

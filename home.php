@@ -14,7 +14,7 @@
 				?>
 			</a>
 			<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
-			<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+			<?php the_excerpt(); ?>
 		</div>
 	<?php endwhile; ?>
 	</div>
