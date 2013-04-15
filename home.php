@@ -9,7 +9,7 @@
 				if ( has_post_thumbnail() ) {
 				  the_post_thumbnail('thumb-article');
 				} else {
-				  echo '<img src="http://dummyimage.com/350x150/eee/fff.jpg&text=thumb" />';
+				  echo '<img data-src="holder.js/350x150" />';
 				}
 				?>
 			</a>

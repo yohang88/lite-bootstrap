@@ -40,6 +40,7 @@
 <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/css/style.css" rel="stylesheet">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script src="<?php echo get_template_directory_uri(); ?>/js/holder.js"></script>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -73,7 +74,7 @@
 
 	<?php if(is_home()): ?>
 	<div class="jumbotron">
-		<img src="/loremphoto/timthumb.php?h=300&w=700&src=/loremphoto/photo/<?php echo rand(1,6) ?>.jpg" />
+		<img data-src="holder.js/700x300" />
 	</div>
 
 	<hr>
