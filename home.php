@@ -5,7 +5,13 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div class="span6">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark">
-				<img src="/loremphoto/timthumb.php?h=150&w=350&src=/loremphoto/photo/<?php echo rand(1,6) ?>.jpg" />
+				<?php
+				if ( has_post_thumbnail() ) {
+				  the_post_thumbnail('thumb-article');
+				} else {
+				  echo '<img src="http://dummyimage.com/350x150/eee/fff.jpg&text=thumb" />';
+				}
+				?>
 			</a>
 			<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 			<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
@@ -24,7 +30,5 @@
 	<?php content_nav( 'nav-below' ); ?>
 	</div>
 </div>
-
-
 
 <?php get_footer(); ?>

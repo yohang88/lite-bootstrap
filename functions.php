@@ -1,6 +1,7 @@
 <?php
 
 add_theme_support( 'post-thumbnails' );
+add_image_size('thumb-article', 350, 150, true);
 
 if ( ! function_exists( 'content_nav' ) ) :
 /**
@@ -19,3 +20,12 @@ function content_nav( $html_id ) {
     <?php endif;
 }
 endif;
+
+// Show posts of 'post', 'page' and 'movie' post types on home page
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+
+function add_my_post_types_to_query( $query ) {
+    if ( $query->is_main_query() )
+        $query->set( 'post_type', array( 'post', 'page', 'quote', 'photo', 'video' ) );
+    return $query;
+}

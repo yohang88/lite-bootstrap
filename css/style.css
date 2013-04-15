@@ -15,4 +15,5 @@
 }
 .article-list.row-fluid [class*="span"]:nth-child(odd) {
   margin-left: 0;
+  clear: both;
 }
