@@ -62,21 +62,17 @@
 <div class="container-narrow">
 
 	<div class="masthead">
-		<ul class="nav nav-pills pull-right">
-			<li class="active"><a href="/">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav nav-pills pull-right' ) ); ?>
 		<h3 class="muted"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
 		<p><?php bloginfo( 'description' ); ?></p>
-	<hr>
+	<hr />
 	</div>
 
 	<?php if(is_home()): ?>
 	<div class="jumbotron">
-		<img data-src="holder.js/700x300" />
+		<img data-src="holder.js/700x300/auto" />
 	</div>
 
-	<hr>
+	<hr />
 <?php endif; ?>
 

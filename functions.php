@@ -26,7 +26,7 @@ add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
 function add_my_post_types_to_query( $query ) {
     if ( $query->is_main_query() )
-        $query->set( 'post_type', array( 'post', 'page', 'quote', 'photo', 'video' ) );
+        $query->set( 'post_type', array( 'post', 'quote', 'photo', 'video' ) );
     return $query;
 }
 
@@ -35,7 +35,7 @@ add_action( 'init', 'register_my_menus' );
 function register_my_menus() {
     register_nav_menus(
         array(
-            'header' => 'Header Menu'
+            'primary' => 'Primary Menu'
         )
     );
 }
@@ -44,3 +44,12 @@ function new_excerpt_length($length) {
     return 13;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
+
+add_filter( 'nav_menu_css_class', 'additional_active_item_classes', 10, 2 );
+function additional_active_item_classes($classes = array(), $menu_item = false){
+    if(in_array('current-menu-item', $menu_item->classes)){
+        $classes[] = 'active';
+    }
+
+    return $classes;
+}

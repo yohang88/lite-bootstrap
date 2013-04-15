@@ -5,7 +5,7 @@
 	<div class="row-fluid">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div class="span12">
-			<img data-src="holder.js/700x75" />
+			<img data-src="holder.js/700x75/auto" />
 			<h1><?php the_title() ?></h1>
 			<?php the_content() ?>
 			<?php comments_template(); ?>
