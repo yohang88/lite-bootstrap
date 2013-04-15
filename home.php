@@ -4,7 +4,9 @@
 	<div class="row-fluid article-list">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div class="span6">
-			<img src="/loremphoto/timthumb.php?h=150&w=350&src=/loremphoto/photo/<?php echo rand(1,6) ?>.jpg" />
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark">
+				<img src="/loremphoto/timthumb.php?h=150&w=350&src=/loremphoto/photo/<?php echo rand(1,6) ?>.jpg" />
+			</a>
 			<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 			<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 		</div>
@@ -19,14 +21,7 @@
 
 <div class="row-fluid">
 	<div class="span12">
-		<ul class="pager">
-			<li class="previous">
-				<a href="#">&larr; Older</a>
-			</li>
-			<li class="next">
-				<a href="#">Newer &rarr;</a>
-			</li>
-		</ul>
+	<?php content_nav( 'nav-below' ); ?>
 	</div>
 </div>
 

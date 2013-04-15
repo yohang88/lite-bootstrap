@@ -2,6 +2,14 @@
   margin: 0 auto;
   max-width: 700px;
 }
+.masthead h3,
+.masthead p {
+  margin-bottom: 0;
+  line-height: 30px;
+}
+.masthead hr {
+  margin-top: 10px;
+}
 .article-list img {
   width: 100%;
 }

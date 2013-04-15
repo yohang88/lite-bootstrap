@@ -66,10 +66,10 @@
 			<li><a href="#">About</a></li>
 			<li><a href="#">Contact</a></li>
 		</ul>
-		<h3 class="muted">My Website Name</h3>
-	</div>
-
+		<h3 class="muted"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
+		<p><?php bloginfo( 'description' ); ?></p>
 	<hr>
+	</div>
 
 	<?php if(is_home()): ?>
 	<div class="jumbotron">
