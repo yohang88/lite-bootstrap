@@ -17,3 +17,14 @@
   margin-left: 0;
   clear: both;
 }
+.entry-content .aligncenter {
+  margin: 0 auto;
+}
+.entry-content .alignleft {
+  float: left;
+  margin-right: 15px;
+}
+.entry-content .alignright {
+  float: right;
+  margin-left: 15px;
+}
