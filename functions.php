@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) )
+    $content_width = 700;
+
 add_theme_support( 'post-thumbnails' );
 add_image_size('thumb-article', 350, 150, true);
 
