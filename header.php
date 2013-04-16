@@ -14,27 +14,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
-	global $page, $paged;
-
-	wp_title( '|', true, 'right' );
-
-	// Add the blog name.
-	bloginfo( 'name' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
-
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'lite-bootstrap' ), max( $paged, $page ) );
-
-	?></title>
+<title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.css" rel="stylesheet">
@@ -68,7 +48,7 @@
 	<hr />
 	</div>
 
-	<?php if(is_home()): ?>
+	<?php if(!is_paged() && !is_archive() && !is_page() && !is_single()): ?>
 	<div class="jumbotron">
 		<img data-src="holder.js/700x300/auto" />
 	</div>
