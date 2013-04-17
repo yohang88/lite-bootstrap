@@ -30,15 +30,17 @@ body {
 }
 
 .entry-content {
-    .aligncenter {
-        margin: 0 auto;
-    }
-    .alignleft {
-        float: left;
-        margin-right: 15px;
-    }
-    .alignright {
-        float: right;
-        margin-left: 15px;
+        @media (min-width: 1200px) {
+        .aligncenter {
+            margin: 0 auto;
+        }
+        .alignleft {
+            float: left;
+            margin-right: 15px;
+        }
+        .alignright {
+            float: right;
+            margin-left: 15px;
+        }
     }
 }
