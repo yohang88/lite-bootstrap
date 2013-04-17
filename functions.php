@@ -31,7 +31,7 @@ endif;
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
 function add_my_post_types_to_query( $query ) {
-    if ( $query->is_main_query() )
+    if ( $query->is_main_query() && !is_admin() )
         $query->set( 'post_type', array( 'post', 'page', 'quote', 'photo', 'video' ) );
     return $query;
 }
