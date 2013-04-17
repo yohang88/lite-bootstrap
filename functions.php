@@ -62,8 +62,7 @@ function additional_active_item_classes($classes = array(), $menu_item = false){
 
 
 $args = array(
-    'default-image' => get_template_directory_uri() . '/images/header.jpg',
-    'width'         => 700,
-    'height'        => 300
+    'width'  => 700,
+    'height' => 300
     );
 add_theme_support( 'custom-header' , $args);

@@ -44,7 +44,6 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav nav-pills pull-right' ) ); ?>
 		<h3 class="muted"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
 		<p><?php bloginfo( 'description' ); ?></p>
-	<hr />
 	</div>
 
 	<?php if(get_header_image() && !is_paged() && !is_archive() && !is_single()): ?>
