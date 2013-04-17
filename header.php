@@ -40,7 +40,6 @@
 <body <?php body_class(); ?>>
 
 <div class="container-narrow">
-
 	<div class="masthead">
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav nav-pills pull-right' ) ); ?>
 		<h3 class="muted"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
@@ -48,11 +47,10 @@
 	<hr />
 	</div>
 
-	<?php if(!is_paged() && !is_archive() && !is_page() && !is_single()): ?>
+	<?php if(get_header_image() && !is_paged() && !is_archive() && !is_single()): ?>
 	<div class="jumbotron">
-		<img data-src="holder.js/700x300/auto" />
+		<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" />
 	</div>
-
 	<hr />
-<?php endif; ?>
+	<?php endif; ?>
 
