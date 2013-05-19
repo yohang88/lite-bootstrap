@@ -60,7 +60,6 @@ function additional_active_item_classes($classes = array(), $menu_item = false){
     return $classes;
 }
 
-
 $args = array(
     'width'  => 700,
     'height' => 300
